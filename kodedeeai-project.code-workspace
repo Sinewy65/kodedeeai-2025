@@ -1,0 +1,184 @@
+{
+  "folders": [
+    {
+      "name": "🚀 KodeDeeAI Project",
+      "path": "."
+    },
+    {
+      "name": "🎨 Frontend (React)",
+      "path": "./webapp/frontend"
+    },
+    {
+      "name": "⚙️ Backend (Node.js)",
+      "path": "./webapp/backend"
+    },
+    {
+      "name": "🤖 n8n Workflows",
+      "path": "./n8n-flows"
+    },
+    {
+      "name": "📚 Documentation",
+      "path": "./docs"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "files.associations": {
+      "*.jsx": "javascriptreact",
+      "*.tsx": "typescriptreact"
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.git": true,
+      "**/coverage": true
+    },
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.git": true,
+      "**/coverage": true
+    },
+    "editor.rulers": [80, 120],
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "eslint.workingDirectories": [
+      "./webapp/frontend",
+      "./webapp/backend"
+    ],
+    "tailwindCSS.includeLanguages": {
+      "javascript": "javascript",
+      "html": "HTML"
+    },
+    "tailwindCSS.experimental.classRegex": [
+      "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+      "className:\\s*?[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "ms-vscode.vscode-json",
+      "ms-vscode.vscode-markdown",
+      "formulahendry.auto-rename-tag",
+      "christian-kohler.path-intellisense",
+      "ms-vscode.vscode-npm-script",
+      "ms-vscode.vscode-node-azure",
+      "rangav.vscode-thunder-client",
+      "ms-vscode.vscode-docker",
+      "ms-vscode.vscode-git-graph"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🚀 Start Development",
+        "type": "shell",
+        "command": "npm run dev",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "🏗️ Build Frontend",
+        "type": "shell",
+        "command": "npm run build",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "🧪 Run Tests",
+        "type": "shell",
+        "command": "npm test",
+        "group": "test",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "🔧 Install Dependencies",
+        "type": "shell",
+        "command": "npm run install:all",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "🧹 Clean & Reset",
+        "type": "shell",
+        "command": "npm run reset",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new"
+        },
+        "problemMatcher": []
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🎨 Debug Frontend (Chrome)",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:5173",
+        "webRoot": "${workspaceFolder}/webapp/frontend/src",
+        "sourceMaps": true
+      },
+      {
+        "name": "⚙️ Debug Backend (Node.js)",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/webapp/backend/server.js",
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "console": "integratedTerminal",
+        "sourceMaps": true,
+        "restart": true
+      }
+    ]
+  }
+}

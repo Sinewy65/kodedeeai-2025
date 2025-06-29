@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 KodeDeeAI → GitHub → Lovable.dev Setup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">
+                🚀 KodeDeeAI Setup Guide
+            </h1>
+            <p class="text-xl text-gray-600">
+                จาก Local Development → GitHub → Lovable.dev
+            </p>
+        </div>
+
+        <!-- Status -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-green-600 mb-4">✅ สถานะปัจจุบัน</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center">
+                    <span class="text-green-500 mr-2">✅</span>
+                    <span>โค้ดพร้อมใช้งาน</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-green-500 mr-2">✅</span>
+                    <span>Development server รันได้</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-green-500 mr-2">✅</span>
+                    <span>Dependencies ติดตั้งแล้ว</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-green-500 mr-2">✅</span>
+                    <span>Project structure เรียบร้อย</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: GitHub Setup -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">🐙 ขั้นตอนที่ 1: สร้าง GitHub Repository</h2>
+            
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="font-bold">วิธีที่ 1: GitHub Desktop (แนะนำ)</h3>
+                    <ol class="list-decimal list-inside space-y-2 mt-2">
+                        <li>ดาวน์โหลด <a href="https://desktop.github.com/" class="text-blue-600 hover:underline">GitHub Desktop</a></li>
+                        <li>ติดตั้งและ login ด้วย GitHub account</li>
+                        <li>Add existing repository → เลือกโฟลเดอร์ kodedeeai-project</li>
+                        <li>Publish repository → ตั้งชื่อ "kodedeeai-project" → Public</li>
+                    </ol>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="font-bold">วิธีที่ 2: Web Upload</h3>
+                    <ol class="list-decimal list-inside space-y-2 mt-2">
+                        <li>ไปที่ <a href="https://github.com" class="text-blue-600 hover:underline">github.com</a></li>
+                        <li>New repository → ชื่อ "kodedeeai-project" → Public</li>
+                        <li>uploading an existing file → ลากโฟลเดอร์ทั้งหมด</li>
+                        <li>Commit changes</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-yellow-50 rounded-lg">
+                <p class="text-sm text-yellow-800">
+                    <strong>หมายเหตุ:</strong> ตรวจสอบให้แน่ใจว่า repository เป็น <strong>Public</strong> 
+                    เพื่อให้ Lovable.dev เข้าถึงได้
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 2: Lovable.dev Import -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-purple-600 mb-4">🎨 ขั้นตอนที่ 2: Import เข้า Lovable.dev</h2>
+            
+            <div class="space-y-4">
+                <ol class="list-decimal list-inside space-y-3">
+                    <li>
+                        <strong>เข้าสู่ Lovable.dev</strong>
+                        <div class="ml-6 mt-2">
+                            <a href="https://lovable.dev" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                                เปิด lovable.dev
+                            </a>
+                        </div>
+                    </li>
+                    
+                    <li><strong>สร้างบัญชีหรือ Login</strong> (สามารถใช้ GitHub account)</li>
+                    
+                    <li><strong>Create new project</strong></li>
+                    
+                    <li><strong>เลือก "Import from GitHub"</strong></li>
+                    
+                    <li><strong>ให้สิทธิ์เข้าถึง GitHub account</strong></li>
+                    
+                    <li>
+                        <strong>เลือก repository: "kodedeeai-project"</strong>
+                        <div class="ml-6 mt-2 p-3 bg-gray-50 rounded">
+                            <p class="text-sm"><strong>สำคัญ:</strong> ตั้งค่าดังนี้</p>
+                            <ul class="text-sm mt-2 space-y-1">
+                                <li>• <strong>Root Directory:</strong> <code>webapp/frontend</code></li>
+                                <li>• <strong>Framework:</strong> React</li>
+                                <li>• <strong>Build Tool:</strong> Vite</li>
+                                <li>• <strong>Package Manager:</strong> npm</li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li><strong>คลิก "Import & Analyze"</strong> (รอ 2-3 นาที)</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Step 3: AI Development -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-green-600 mb-4">🤖 ขั้นตอนที่ 3: เริ่ม AI Development</h2>
+            
+            <div class="space-y-4">
+                <h3 class="font-bold text-lg">AI Prompts ที่แนะนำ:</h3>
+                
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-bold text-blue-600">Dashboard Improvement</h4>
+                        <div class="mt-2 p-3 bg-gray-50 rounded text-sm">
+                            <code>
+                                สร้าง modern dashboard สำหรับแพลตฟอร์ม KodeDeeAI ที่มี 6 service cards สวยงาม 
+                                รองรับภาษาไทย ใช้ Kanit font มี responsive design และ gradient backgrounds
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-bold text-purple-600">Creative Studio UI</h4>
+                        <div class="mt-2 p-3 bg-gray-50 rounded text-sm">
+                            <code>
+                                ออกแบบ creative studio interface สำหรับ AI content generation 
+                                พร้อม input forms, preview, gallery และ Thai UI labels
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-bold text-green-600">Pricing Page</h4>
+                        <div class="mt-2 p-3 bg-gray-50 rounded text-sm">
+                            <code>
+                                ปรับปรุง pricing page สำหรับตลาดไทย แสดงราคาเป็นบาท 
+                                (Free, Pro ฿299, Enterprise ฿799) พร้อม comparison table
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current URLs -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-indigo-600 mb-4">🌐 URLs ปัจจุบัน</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="text-center p-4 bg-blue-50 rounded-lg">
+                    <h3 class="font-bold text-blue-600">Frontend</h3>
+                    <a href="http://localhost:5173" class="text-blue-600 hover:underline">
+                        http://localhost:5173
+                    </a>
+                </div>
+                <div class="text-center p-4 bg-green-50 rounded-lg">
+                    <h3 class="font-bold text-green-600">Backend API</h3>
+                    <a href="http://localhost:3000" class="text-green-600 hover:underline">
+                        http://localhost:3000
+                    </a>
+                </div>
+                <div class="text-center p-4 bg-purple-50 rounded-lg">
+                    <h3 class="font-bold text-purple-600">API Docs</h3>
+                    <a href="http://localhost:3000/api/docs" class="text-purple-600 hover:underline">
+                        http://localhost:3000/api/docs
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-6 text-white">
+            <h2 class="text-2xl font-bold mb-4">🚀 Quick Actions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://github.com" class="bg-white bg-opacity-20 p-4 rounded-lg hover:bg-opacity-30 transition">
+                    <h3 class="font-bold">🐙 GitHub</h3>
+                    <p class="text-sm">สร้าง repository</p>
+                </a>
+                <a href="https://lovable.dev" class="bg-white bg-opacity-20 p-4 rounded-lg hover:bg-opacity-30 transition">
+                    <h3 class="font-bold">🎨 Lovable.dev</h3>
+                    <p class="text-sm">เริ่ม AI development</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8 text-gray-600">
+            <p>🇹🇭 KodeDeeAI Multi-Service Platform - Made with ❤️ in Thailand 🇹🇭</p>
+            <p class="text-sm mt-2">Local Development Server: รันอยู่ที่ localhost:5173</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if localhost:5173 is accessible
+            fetch('http://localhost:5173')
+                .then(() => {
+                    console.log('Frontend server is running ✅');
+                })
+                .catch(() => {
+                    console.log('Frontend server might not be running ❌');
+                });
+        });
+    </script>
+</body>
+</html>

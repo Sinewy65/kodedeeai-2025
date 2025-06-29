@@ -1,0 +1,58 @@
+{
+  "name": "kodedeeai-project",
+  "version": "1.0.0",
+  "description": "Multi-Service Digital Platform - AI-Powered SaaS Solution",
+  "main": "webapp/backend/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd webapp/frontend && npm run dev",
+    "dev:backend": "cd webapp/backend && npm start",
+    "build": "cd webapp/frontend && npm run build",
+    "preview": "cd webapp/frontend && npm run preview",
+    "start": "cd webapp/backend && npm start",
+    "install:all": "npm install && cd webapp/frontend && npm install && cd ../backend && npm install",
+    "clean": "rimraf webapp/frontend/dist webapp/frontend/node_modules webapp/backend/node_modules node_modules",
+    "reset": "npm run clean && npm run install:all",
+    "test": "cd webapp/frontend && npm run test",
+    "lint": "cd webapp/frontend && npm run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "saas",
+    "ai",
+    "automation",
+    "analytics",
+    "creative-studio",
+    "website-builder",
+    "multi-service",
+    "thai",
+    "lovable",
+    "n8n"
+  ],
+  "author": "KodeDeeAI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/kodedeeai-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/kodedeeai-project/issues"
+  },
+  "homepage": "https://github.com/your-username/kodedeeai-project#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "workspaces": [
+    "webapp/frontend",
+    "webapp/backend"
+  ]
+}
